@@ -1,39 +1,90 @@
-## Go EtherPrime
+# EtherPrime
 
-Official Golang execution layer implementation of EtherPrime.
+⚡ **EtherPrime** is a Proof-of-Work smart contract blockchain built on the Ethereum execution layer.  
+It brings back **PoW + EVM** for a simple, secure, and miner-friendly network.
 
+---
 
-## Building the source
+# Network Overview
 
-For prerequisites and detailed build instructions please read the [Installation Instructions](https://geth.ethereum.org/docs/getting-started/installing-geth).
+| Parameter | Value |
+|-----------|------|
+| Network Name | EtherPrime |
+| Chain ID | 131071 |
+| Consensus | Ethash (Proof-of-Work) |
+| Block Time | ~13 seconds |
+| Initial Block Reward | 7 EPX |
+| Reward Reduction | 5% every 200,000 blocks |
+| Development Reward | 1 EPX per block (until block 2,000,000) |
 
-Building `geth` requires both a Go (version 1.19 or later) and a C compiler. You can install
-them using your favourite package manager. Once the dependencies are installed, run
+---
 
-```shell
-make geth
+# Go-Prime
+
+Official **Golang execution layer implementation** of EtherPrime.
+
+This repository contains the source code for running an EtherPrime node.
+
+---
+
+# Requirements
+
+Building EtherPrime requires:
+
+- **Go 1.19 or later**
+- **C compiler**
+
+Install them using your system package manager.
+
+Example (Ubuntu):
+
+```
+sudo apt install golang build-essential
+
 ```
 
-or, to build the full suite of utilities:
+---
 
-```shell
-make all
+# Build
+
+Clone the repository:
+
+```
+git clone https://github.com/EtherPrime/go-prime.git
 ```
 
-### Hardware Requirements
+## Build on Windows
 
-Minimum:
+```
+go build -o build/bin/geth.exe ./cmd/geth
+```
 
-* CPU with 2+ cores
-* 4GB RAM
-* 1TB free storage space to sync the Mainnet
-* 8 MBit/sec download Internet service
+## Build on Ubuntu / Linux
 
-Recommended:
+```
+go build -o build/bin/geth ./cmd/geth
+```
 
-* Fast CPU with 4+ cores
-* 16GB+ RAM
-* High-performance SSD with at least 1TB of free space
-* 25+ MBit/sec download Internet service
+After building, the binary will be located in:
 
+```
+build/bin/
+```
 
+---
+
+# Hardware Requirements
+
+## Minimum
+
+- CPU with **2+ cores**
+- **4GB RAM**
+- **1TB storage**
+- **8 MBit/sec internet connection**
+
+## Recommended
+
+- Fast CPU with **4+ cores**
+- **16GB RAM**
+- **High-performance SSD**
+- **25+ MBit/sec internet connection**
