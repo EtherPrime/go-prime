@@ -40,7 +40,6 @@ Example (Ubuntu):
 
 ```
 sudo apt install golang build-essential
-
 ```
 
 ---
